@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ada996;
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ! navbar */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+nav li {
+  list-style: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+nav li a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+nav li a:hover {
+  color: #ffd000;
+}
+
+.navUp {
+  display: flex;
+}
+.navDown {
+  display: flex;
+}
+
+/* ! main */
+
+.container {
+  margin-top: 2rem;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.rpgCard {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+  padding: 10px 0;
+  width: 48vw;
+}
+.rpgCard h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffd000;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .rpgCard {
+    width: 80vw;
+  }
+}
+
+/* ! heroes card */
+
+.heroes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.hero {
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  width: 378px;
+  position: relative;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+  color: #f2f2f2;
+  min-height: 25rem;
+}
+.hero:hover {
+  -webkit-box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.hero h4 {
+  padding: 1rem;
+}
+.hero-head {
+  display: flex;
+  border-bottom: 5px outset #000000;
+}
+.hero-info {
+  flex: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-name {
+  font-size: 1.8rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4,
+    2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4,
+    5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd,
+    6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4,
+    8px 7px 0px #5dabcd;
+  color: red;
+}
+.hero-race {
+  font-style: italic;
+}
+.hero-logo {
+  flex: 40%;
+  width: 100%;
+}
+.hero-lvl {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 1.2rem;
+}
+.hero-stat {
+  width: 100%;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.hero-bar {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.test {
+  width: 50%;
+  margin: 0.2rem;
+  height: 4.2rem;
+  position: relative;
+  border-radius: 3px;
+}
+
+.liquid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  background: #ed213a;
+  background: -webkit-linear-gradient(to right, #93291e, #ed213a);
+  background: linear-gradient(to right, #93291e, #ed213a);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.liquid:last-of-type {
+  right: 0;
+}
+.test:last-of-type .liquid {
+  background: #667db6;
+  background: -webkit-linear-gradient(
+    to right,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  );
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+}
+.test:last-of-type .liquid:before,
+.test:last-of-type .liquid:after {
+  top: var(--mana-top);
+}
+.liquid:before,
+.liquid:after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  top: var(--hp-top);
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.liquid:before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+.liquid:after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+.liquid-info {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+.hero-caracs {
+  border-top: 5px outset #000000;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  position: relative;
+}
+.hero-carac {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 1rem;
+}
+.hero-carac h4 {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+.hero-carac span {
+  width: 80%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+.carac-img {
+  width: 3rem;
+  height: 3rem;
+}
