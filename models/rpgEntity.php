@@ -24,8 +24,8 @@ abstract class RpgEntity {
     } else {
         $damage = rand($this->damageMin, $this->damageMax);
         $baseDamage = $damage;
-        if (rand(1, 100) <= $this->scoreCriticalStrike) {
-            $damage += $damage * ($this->criticalDamage / 100);
+        if (rand(1, 100) <= $this->scoreCritStrike) {
+            $damage += $damage * ($this->critDamage / 100);
         }
 
         if ($rpgEntity->defense > 0) {
@@ -68,7 +68,7 @@ abstract class RpgEntity {
                   $rpgEntity->hp = 0;
               }
 
-              echo($this instanceof Hero ? $this->getName() : 'Le '.get_class($this)).' a infligé '.round($damage, 2).' dommages '.($rpgEntity instanceof Hero ? ' a '.$rpgEntity->getName() : ' au '.get_class($rpgEntity))." avec l'abilité ".$this->ability->getName().'<br>';
+              echo($this instanceof Hero ? $this->getName() : 'Le '.get_class($this)).' a infligé '.round($damage, 2).' dommages '.($rpgEntity instanceof Hero ? ' a '.$rpgEntity->getName() : ' au '.get_class($rpgEntity))." avec l'abilité ".'<img width="16px" height="16px" src="'.$this->ability->getLogo().'"/>'. " ".$this->ability->getName().'. <br>';
           } else {
               echo 'Pas assez de Mana !<br>';
           }

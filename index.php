@@ -16,9 +16,13 @@ include_once('models/test.php');
 </head>
 
 <body>
-  <div class="logs">
-    <h2>Log du combat</h2>
-    <?php echo dragFight($mage1, $warrior1, $rogue, $drag1 ); ?>
+  <div class="container">
+    <div class="logs">
+      <h2>Log du combat</h2>
+      <div class="log">
+        <?php echo dragFight($mage1, $warrior1, $rogue, $drag1 ); ?>
+      </div>
+    </div>
   </div>
   <div class="container">
     <div class="rpgCard">

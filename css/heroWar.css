@@ -274,3 +274,20 @@ nav li a:hover {
   width: 3rem;
   height: 3rem;
 }
+.logs {
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+  color: #f2f2f2;
+}
+.logs h2 {
+  text-align: center;
+}
+.log {
+  width: 80vw;
+  height: 10rem;
+  overflow-y: scroll;
+  font-size: 1.2rem;
+}
