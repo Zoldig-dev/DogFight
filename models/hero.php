@@ -119,6 +119,28 @@ HTML;
 
   }
 
+  public function displayHtmlWar(){
+    echo <<<HTML
+    <div class="heroWar">
+      <div class="heroWar-bar">
+        <div class="test2">
+          <span class="liquid2" style="--hp-top:calc(({$this->hp} / {$this->hpMax}))"></span>
+          <span class="liquid-info"> $this->hp / $this->hpMax</span>
+        </div>
+        <div class="test2">
+              <span class="liquid2" style="--mana-top:calc(({$this->mana} / {$this->manaMax}) )"></span>
+              <span class="liquid-info"> $this->mana / $this->manaMax</span>
+        </div>
+      </div>
+      <div class="heroWar-logo">
+        <h3 class="heroWar-name"> {$this->class} {$this->name}</h3>
+        <img src="{$this->logo}" />
+        <div class="heroWar-lvl">LV :{$this->level}</div>
+      </div>
+    </div>
+HTML;
+  }
+
   /**
    * Get the value of name
    */ 

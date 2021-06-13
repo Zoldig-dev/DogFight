@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ada996;
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ? navbar */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+nav li {
+  list-style: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  z-index: 999;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+nav li a:hover {
+  color: #ffd000;
+}
+
+.navUp {
+  display: flex;
+}
+
+.navDown {
+  display: flex;
+}
+
+/* ? Dragon war */
+
+.fond {
+  width: 100%;
+  height: 90vh;
+  /* overflow: hidden; */
+  background-image: url(../images/fantasy.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.fond img {
+  z-index: 1;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60%;
+  height: auto;
+}
+
+.displayHero {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 14rem;
+  background: #434343;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroesWar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 12rem;
+}
+
+.heroWar {
+  width: 22rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.heroWar-logo {
+  flex: 80%;
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+}
+
+.heroWar-logo img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.heroWar-name {
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4,
+    2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4,
+    5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd,
+    6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4,
+    8px 7px 0px #5dabcd;
+  color: red;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.heroWar-lvl {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  font-size: 1.2rem;
+  color: #dbdbdb;
+  z-index: 999;
+}
+
+.heroWar-bar {
+  z-index: 999;
+  width: 4rem;
+  height: 12rem;
+  flex: 10%;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.heroWar-bar:last-of-type {
+  left: 0;
+}
+
+.test2 {
+  width: 4rem;
+  height: 12rem;
+  position: absolute;
+  top: 0;
+  border-radius: 3px;
+}
+
+.test2:last-of-type {
+  right: 0;
+}
+
+.liquid2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4rem;
+  height: 12rem;
+  background: #ed213a;
+  background: -webkit-linear-gradient(to right, #93291e, #ed213a);
+  background: linear-gradient(to right, #93291e, #ed213a);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.liquid2:last-of-type {
+  left: 0;
+}
+
+.test2:last-of-type .liquid2 {
+  background: #667db6;
+  background: -webkit-linear-gradient(
+    to right,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  );
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+}
+
+.liquid2:before,
+.liquid2:after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: var(--hp-top);
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.test2:last-of-type .liquid2:before,
+.test2:last-of-type .liquid2:after {
+  top: var(--mana-top);
+}
+
+.liquid2:before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.liquid2:after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.liquid-info {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}

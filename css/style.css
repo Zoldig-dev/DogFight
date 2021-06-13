@@ -25,7 +25,7 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 5rem;
+  height: 10vh;
   background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
@@ -34,6 +34,7 @@ nav li {
   list-style: none;
   padding: 0.5rem;
   font-size: 1.5rem;
+  z-index: 999;
 }
 nav li a {
   text-decoration: none;
@@ -54,7 +55,6 @@ nav li a:hover {
 /* ! main */
 
 .container {
-  margin-top: 2rem;
   width: 100%;
   gap: 10px;
   display: flex;
@@ -70,6 +70,7 @@ nav li a:hover {
   padding: 10px 0;
   width: 48vw;
 }
+
 .rpgCard h2 {
   text-align: center;
   font-size: 3rem;
@@ -92,6 +93,7 @@ nav li a:hover {
   align-items: center;
   gap: 2rem;
 }
+
 .hero {
   -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
     5px 5px 15px 5px rgba(0, 0, 0, 0);
@@ -103,6 +105,7 @@ nav li a:hover {
   color: #f2f2f2;
   min-height: 25rem;
 }
+
 .hero:hover {
   -webkit-box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
     red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
@@ -110,13 +113,16 @@ nav li a:hover {
     red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   cursor: pointer;
 }
+
 .hero h4 {
   padding: 1rem;
 }
+
 .hero-head {
   display: flex;
   border-bottom: 5px outset #000000;
 }
+
 .hero-info {
   flex: 60%;
   position: relative;
@@ -125,6 +131,7 @@ nav li a:hover {
   justify-content: center;
   align-items: center;
 }
+
 .hero-name {
   font-size: 1.8rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -136,25 +143,30 @@ nav li a:hover {
     8px 7px 0px #5dabcd;
   color: red;
 }
+
 .hero-race {
   font-style: italic;
 }
+
 .hero-logo {
   flex: 40%;
   width: 100%;
 }
+
 .hero-lvl {
   position: absolute;
   top: 0;
   left: 5px;
   font-size: 1.2rem;
 }
+
 .hero-stat {
   width: 100%;
   min-height: 10rem;
   display: flex;
   flex-direction: column;
 }
+
 .hero-bar {
   width: 100%;
   height: fit-content;
@@ -163,6 +175,7 @@ nav li a:hover {
   justify-content: space-between;
   align-items: center;
 }
+
 .test {
   width: 50%;
   margin: 0.2rem;
@@ -185,9 +198,11 @@ nav li a:hover {
   overflow: hidden;
   border-radius: 3px;
 }
+
 .liquid:last-of-type {
   right: 0;
 }
+
 .test:last-of-type .liquid {
   background: #667db6;
   background: -webkit-linear-gradient(
@@ -199,10 +214,12 @@ nav li a:hover {
   );
   background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
 }
+
 .test:last-of-type .liquid:before,
 .test:last-of-type .liquid:after {
   top: var(--mana-top);
 }
+
 .liquid:before,
 .liquid:after {
   content: "";
@@ -220,11 +237,13 @@ nav li a:hover {
   background: rgba(20, 20, 20, 1);
   animation: animate 5s linear infinite;
 }
+
 .liquid:after {
   border-radius: 40%;
   background: rgba(20, 20, 20, 0.5);
   animation: animate 10s linear infinite;
 }
+
 @keyframes animate {
   0% {
     transform: translate(-50%, -75%) rotate(0deg);
@@ -233,12 +252,14 @@ nav li a:hover {
     transform: translate(-50%, -75%) rotate(360deg);
   }
 }
+
 .liquid-info {
   width: 100%;
   position: absolute;
   bottom: 10px;
   text-align: center;
 }
+
 .hero-caracs {
   border-top: 5px outset #000000;
   width: 100%;
@@ -246,6 +267,7 @@ nav li a:hover {
   margin-bottom: 10px;
   position: relative;
 }
+
 .hero-carac {
   flex: 50%;
   display: flex;
@@ -254,6 +276,7 @@ nav li a:hover {
   align-items: start;
   padding: 1rem;
 }
+
 .hero-carac h4 {
   text-align: center;
   width: 100%;
@@ -261,6 +284,7 @@ nav li a:hover {
   font-size: 1.4rem;
   white-space: nowrap;
 }
+
 .hero-carac span {
   width: 80%;
   height: 2rem;
@@ -270,11 +294,16 @@ nav li a:hover {
   gap: 1rem;
   margin: 1rem auto;
 }
+
 .carac-img {
   width: 3rem;
   height: 3rem;
 }
+
+/* ! logs */
+
 .logs {
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   background: #000000;
@@ -282,9 +311,11 @@ nav li a:hover {
   background: linear-gradient(to right, #434343, #000000);
   color: #f2f2f2;
 }
+
 .logs h2 {
   text-align: center;
 }
+
 .log {
   width: 80vw;
   height: 10rem;
