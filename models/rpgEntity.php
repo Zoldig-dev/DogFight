@@ -16,7 +16,9 @@ abstract class RpgEntity {
   protected int $damageMax;
   protected ?Ability $ability;
   protected ?float $abilityRatio;
-    protected int $turn = 0;
+  protected int $turn = 0;
+  
+
   
   public function dogFight(?RpgEntity $rpgEntity): bool {
     if (0 === $this->turn % 3 && isset($this->ability)) {
@@ -25,11 +27,11 @@ abstract class RpgEntity {
         $damage = rand($this->damageMin, $this->damageMax);
         $baseDamage = $damage;
         if (rand(1, 100) <= $this->scoreCritStrike) {
-            $damage += $damage * ($this->critDamage / 100);
+            $damage += $damage * ($this->critDamage);
         }
 
-        if ($rpgEntity->defense > 0) {
-            $reducedDammages = $damage * $rpgEntity->defense / 100;
+        if ($rpgEntity->def > 0) {
+            $reducedDammages = $damage * $rpgEntity->def / 100;
             $damage -= $reducedDammages;
         }
         $rpgEntity->hp -= $damage;
@@ -77,6 +79,9 @@ abstract class RpgEntity {
       }
   }
 
+
+
+  
   public function getLevel(){
     return $this->level;
   }

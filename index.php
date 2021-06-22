@@ -26,6 +26,23 @@ include_once('models/test.php');
     </div>
   </nav>
   <div class="container">
+    <div class="card">
+      <h2>Creer un Hero</h2>
+      <form action="http://localhost:8000/Heroes/form.php" method="post" enctype="multipart/form-data">
+        <select name="" id="">
+          <option value="">Select a class</option>
+          <option value="Mage">Wizard</option>
+          <option value="Rogue">Rogue</option>
+          <option value="Warrior">Warrior</option>
+        </select>
+        <label for="name"></label>
+        <input name="name" type="text" placeholder="name">
+        <input type="file" name="fileTest" id="fileTest">
+        <input type="submit" value="upload image" name="submit">
+      </form>
+    </div>
+  </div>
+  <div class="container">
     <div class="logs">
       <h2>Log du combat</h2>
       <div class="log">

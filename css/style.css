@@ -52,6 +52,37 @@ nav li a:hover {
   display: flex;
 }
 
+/* ! form */
+
+.card {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+  padding: 0.5rem;
+  margin-top: 3rem;
+  width: 80%;
+}
+.card h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: white;
+}
+.card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.card form input,
+.card form select {
+  width: 100%;
+  height: 2rem;
+}
+@media screen and (max-width: 700px) {
+  .card {
+    width: 80vw;
+  }
+}
+
 /* ! main */
 
 .container {
@@ -304,6 +335,7 @@ nav li a:hover {
 
 .logs {
   margin: 2rem auto;
+  width: 80%;
   display: flex;
   flex-direction: column;
   background: #000000;
@@ -311,14 +343,22 @@ nav li a:hover {
   background: linear-gradient(to right, #434343, #000000);
   color: #f2f2f2;
 }
+@media screen and (max-width: 700px) {
+  .logs {
+    width: 80vw;
+  }
+}
 
 .logs h2 {
+  margin-bottom: 0.5rem;
   text-align: center;
+  color: white;
 }
 
 .log {
-  width: 80vw;
-  height: 10rem;
+  width: 100%;
+  height: 30rem;
   overflow-y: scroll;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
 }

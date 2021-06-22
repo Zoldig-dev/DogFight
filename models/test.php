@@ -38,7 +38,7 @@ $monsters=[];
 
 $gobs1 = new Gobelin(10);
 $ogre1 = new Ogre(20);
-$drag1 = new Dragon(40);
+$drag1 = new Dragon(30);
 
 $monsters[] = $gobs1;
 $monsters[] = $ogre1;
@@ -55,35 +55,35 @@ function dragFight($mage1, $warrior1, $rogue, $drag1 ){
       && (!$warrior1->isDead()?$warrior1->dogFight($drag1) : $warrior1->isDead())
       && (!$rogue->isDead()?$rogue->dogFight($drag1) : $rogue->isDead())
     ) 
-    && !$drag1->isDead()){
-
+    && !$drag1->isDead()
+    
+    ){
+    
+    $index = rand(0, count($heros)-1);
     $drag1->dogFight($heros[$index]);
   
-    if(count($heros) == 1){
-      $index = 0;
-    }elseif(count($heros) == 2 ){
-      $index = rand(0,1);
-    }else{
-      $index = rand(0, 2);
-    }
-
     if($mage1->isDead() && $warrior1->isDead() && $rogue->isDead()){
       echo 'You lose'. '</br>';
       break;
     }
-  }
-
-  if($mage1->isDead()){
-    echo $mage1->getName(). ' est mort' .'</br>';
-    array_splice($heros, (array_search('$mage1', $heros)), 1);
-  }
-  if($warrior1->isDead()){
-    echo $warrior1->getName(). ' est mort' .'</br>';
-    array_splice($heros, (array_search('$warrior1', $heros)), 1);
-  }
-  if($rogue->isDead()){
-    echo $rogue->getName(). ' est mort' .'</br>';
-    array_splice($heros, (array_search('$rogue', $heros)), 1);
+    
+    if($mage1->isDead() && in_array($mage1, $heros)){
+      echo $mage1->getName(). ' est mort' .'</br>';
+      array_splice($heros, (array_search($mage1, $heros)), 1);
+      $index = rand(0, count($heros)-1);
+    }
+    
+    if($warrior1->isDead() && in_array($warrior1, $heros)){
+      echo $warrior1->getName(). ' est mort' .'</br>';
+      array_splice($heros, (array_search($warrior1, $heros)), 1);
+      $index = rand(0, count($heros)-1);
+    }
+  
+    if($rogue->isDead() && in_array($rogue, $heros)){
+      echo $rogue->getName(). ' est mort' .'</br>';
+      array_splice($heros, (array_search($rogue, $heros)), 1);
+      $index = rand(0, count($heros)-1);
+    }
   }
 
   if($drag1->isDead()){
